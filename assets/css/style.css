@@ -4,3 +4,8 @@
     color: white;
     border: 2px solid black;
 }
+
+.topic-form {
+    margin: 2px;
+    background-color: green;
+}
