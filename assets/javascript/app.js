@@ -36,7 +36,7 @@ $(document).ready(function () {
         $("button").on("click", function () {
             var topic = $(this).data("value");
             console.log(topic);
-            var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=sujw6VeMNKiA2XD2Nuz2tlP0qKK88gWX&limit=10"
+            var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=sujw6VeMNKiA2XD2Nuz2tlP0qKK88gWX&limit=10"
 
             $.ajax({
                 url: queryUrl,
