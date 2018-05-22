@@ -79,7 +79,7 @@ $(document).ready(function () {
                     newGif.attr("data-still", objectData[i].images.fixed_height_still.url);
                     newGif.attr("data-animate", objectData[i].images.fixed_height.url);
                     newGif.attr("data-state", "still");
-                    newGif.attr("style", "width: 50%");
+                    newGif.attr("style", "width: 30%");
                     card.prepend(newGif);
                     var download = $('<a download></a>').attr("href", newGif.attr("data-animate"));
                     download.text("Download");
