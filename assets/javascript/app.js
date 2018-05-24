@@ -91,18 +91,18 @@ $(document).ready(function () {
                     card.prepend(newGif);
                     var download = $('<a download></a>').attr("href", newGif.attr("data-animate"));
                     download.text("Download");
-                    var favorite = $("<button>");
-                    favorite.addClass("btn btn-primary addToFavorite");
-                    favorite.text("Add to Favorite");
+                    // var favorite = $("<button>");
+                    // favorite.addClass("btn btn-primary addToFavorite");
+                    // favorite.text("Add to Favorite");
                     cardBody.prepend(download);
-                    card.prepend(favorite);
+                    // card.prepend(favorite);
                     $(".gifs").prepend(card);
                 }
 
-                $(".addToFavorite").on("click", function () {
+                // $(".addToFavorite").on("click", function () {
 
 
-                })
+                // })
 
                 //animate vs stop gifs
                 $(".gif").on("click", function () {
