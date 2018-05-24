@@ -16,6 +16,10 @@
     margin-top: 5px;
 }
 
+.favoriteSection{
+    display: none;
+}
+
 body {
     background-image: url("../images/sun-pattern.png");
 }

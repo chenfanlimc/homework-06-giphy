@@ -1,5 +1,8 @@
 
 var topics = ["final fantasy", "jumanji", "john wick", "friday", "sunshine", "cat", "disney"];
+var favGifArrStill = [];
+var favGifArrAnimate = [];
+var favInfoArr = [];
 
 $(document).ready(function () {
     //setting the initial topic buttons
@@ -31,13 +34,17 @@ $(document).ready(function () {
         }
     })
 
-    $(".clearGifs").on("click", function() {
+    $(".clearGifs").on("click", function () {
         $(".gifs").empty();
     })
 
-    $(".resetTopic").on("click", function() {
+    $(".resetTopic").on("click", function () {
         topics = ["final fantasy", "jumanji", "john wick", "friday", "sunshine", "cat", "disney"];
         createTopic();
+    })
+
+    $(".favoriteDisplayButton").on("click", function () {
+        $(".favoriteSection").attr("display", "block");
     })
 
     //adds functionality to buttons, making ajax call to get the appropriate gifs
@@ -58,6 +65,7 @@ $(document).ready(function () {
                     var card = $("<div>");
                     card.addClass("imageContainer");
                     card.attr("style", "width: 100%");
+                    card.attr("data-index", [i]);
                     var cardBody = $("<div>");
                     cardBody.addClass("card-body");
                     card.prepend(cardBody);
@@ -83,9 +91,18 @@ $(document).ready(function () {
                     card.prepend(newGif);
                     var download = $('<a download></a>').attr("href", newGif.attr("data-animate"));
                     download.text("Download");
+                    var favorite = $("<button>");
+                    favorite.addClass("btn btn-primary addToFavorite");
+                    favorite.text("Add to Favorite");
                     cardBody.prepend(download);
+                    card.prepend(favorite);
                     $(".gifs").prepend(card);
                 }
+
+                $(".addToFavorite").on("click", function () {
+
+
+                })
 
                 //animate vs stop gifs
                 $(".gif").on("click", function () {
